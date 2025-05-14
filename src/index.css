@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* classes */
+.hero-section,
+.header {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: heroAni 15s ease infinite;
+}
+
+
+/* animated css */
+@keyframes heroAni {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Login css */
+.login,
+.register {
+  background-image: url(./assets/loginUi.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* aboutus css */
+.aboutus {
+  background-image: url("../src/assets/aboutbanner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 5px;
+}
+.aboutbannerCover {
+  background-image: url("../src/assets/aboutcover.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* contact page css */
+.contact-cover {
+  background-image: url("../src//assets//contactus.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.contact-banner {
+  background-image: url("../src/assets/contactbanner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.contact-ui {
+  background-image: url("../src//assets//loginUi.png");
+}
+/* faqs page  */
+.faqsCover {
+  background-image: url("../src//assets//faqs.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.faqsIconImg {
+  background-image: url("../src//assets//faqicon.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* service cover */
+.servicecover{
+  background-image: url('../src//assets//servicecover.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* blog css  */
+.blog-cover{
+  background-image: url('../src//assets/blogcover.jpg');
+   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* RESPONSIVE CSS */
+@media (max-width: 640px) {
+  .popularbrand {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: heroAni 15s ease infinite;
+  }
+}
+@media (max-width: 360px) {
+  .faqsCover {
+    height: 300px;
+  }
+}
+
+@media (max-width: 412px) {
+  .faqsCover {
+    height: 300px;
+  }
+}
+@media (max-width: 540px) {
+  .faqsCover {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faqsCover {
+    height: 430px;
+  }
+}
