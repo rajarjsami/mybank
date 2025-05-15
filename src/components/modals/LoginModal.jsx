@@ -1,38 +1,58 @@
 import React from 'react';
-// import logo from '../assets/mybank';
+import logo from '../logo/mybank.png';
+
 
 export default function LoginModal({ onClose }) {
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="login bg-white p-6 h-[500px] rounded-md relative w-full max-w-md shadow-lg">
-        <button className="absolute top-3 right-4 text-xl text-white" onClick={onClose}>×</button>
-        <div className='h-24 w-24 bg-red-500 rounded-full ml-36'>
-            <img src="" />
-        </div>
-        <form className="space-y-4 mt-5">
-            <div className='w-[70%] ml-[50px]'>
-            <label className='text-white underline float-left mb-3'>Email</label>
-          <input type="email" placeholder="Email" className="w-full border px-4 py-2 rounded-md outline-none" />
-            </div>
+   <div className="fixed text-white inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 px-4">
+  <div className="text-white login p-6 rounded-md relative w-full max-w-md shadow-lg">
+    {/* Close Button */}
+    <button className="absolute top-3 right-4 text-2xl text-white" onClick={onClose}>
+      ×
+    </button>
 
-           <div className='w-[70%] ml-[50px]'>
-            <label className='text-white underline float-left mb-3'>Password</label>
-          <input type="password" placeholder="Password" className="w-full border px-4 py-2 rounded-md outline-none" />
-           </div>
-
-           <div className='w-full'>
-            <span className='text-white cursor-pointer text-[14px] underline ml-[55px]'>Forget the Password</span>
-           </div>
-         
-          <button className="w-[40%] bg-black text-white py-2 ml-[110px] rounded-md border-[1px] border-white">Sign In</button>
-
-          
-           <div className='w-full'>
-            <span className='text-white cursor-pointer text-[14px] underline ml-[125px]'>Dont have an account</span>
-           </div>
-
-        </form>
-      </div>
+    {/* Logo or Image */}
+    <div className="h-24 w-24 border-2 rounded-full mx-auto mb-4">
+      <img src={logo} alt="logo" className="h-full w-full object-cover rounded-full" />
     </div>
+
+    {/* Form */}
+    <form className="space-y-4">
+      <div className="w-full">
+        <label className="text-white font-semibold mb-1 block">Email</label>
+        <input
+          type="email"
+          placeholder="Email"
+          className="w-full border px-4 py-2 rounded-md outline-none"
+        />
+      </div>
+
+      <div className="w-full">
+        <label className="text-white font-semibold mb-1 block">Password</label>
+        <input
+          type="password"
+          placeholder="Password"
+          className="w-full border px-4 py-2 rounded-md outline-none"
+        />
+      </div>
+
+      <div className="w-full text-right">
+        <span className="text-sm text-white underline cursor-pointer">Forgot Password?</span>
+      </div>
+
+      <button
+        type="submit"
+        className="w-full bg-black text-white py-2 rounded-md border border-white hover:bg-gray-900"
+      >
+        Sign In
+      </button>
+
+      <div className="w-full text-center">
+        <span className="text-sm text-white underline cursor-pointer">Don't have an account?</span>
+      </div>
+    </form>
+  </div>
+</div>
+
   );
 }

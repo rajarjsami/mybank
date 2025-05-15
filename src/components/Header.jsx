@@ -42,11 +42,12 @@ return (
       {menuOpen && (
         <div className="absolute top-16 left-0 w-full bg-white shadow-md z-10 md:hidden flex flex-col items-center space-y-4 py-4">
        
-          <Link to="/products">{strings.Products}</Link>
-        <a href="#">{strings.About}</a>
-        <a href="#">{strings.FAQs}</a>
-        <a href="#">{strings.Services}</a>
-        <a href="#">{strings.Blog}</a>
+            <Link to="/">Home</Link>
+       <Link to="/abouts">{strings.About}</Link>
+       <Link to="/contacts">{strings.contacts}</Link>
+       <Link to="/faq">{strings.FAQs}</Link>
+       <Link to="/services">{strings.Services}</Link>
+       <Link to="/blog">{strings.Blog}</Link>
           <span onClick={onLoginClick}  className="font-bold cursor-pointer">{strings.Login}</span>
           <button onClick={onRegisterClick} className="bg-black text-white rounded-md w-32 py-2 font-bold">
             Get Started

@@ -57,37 +57,36 @@ function Contacts() {
         </div>
       </div>
 
-      <div className="w-full h-auto flex mb-4">
-        <div className="w-[30%] p-6 border-t-2">
-          <h1 className="p-6 text-[20px] font-bold">New York Office</h1>
-          <div className="flex">
-            <span className="mr-3">
-              <IoLocation />
-            </span>
-            <span className="w-48">
-              123 New AddressLane, Hyderabad, NY, Pakistan
-            </span>
-          </div>
-          <div className="flex mt-2">
-            <span className="mr-3">
-              <FaPhoneAlt />
-            </span>
-            <span className="w-48">(+92) 302-975-5913</span>
-          </div>
-          <div className="flex mt-2">
-            <span className="mr-3">
-              <MdEmail />
-            </span>
-            <span className="w-48">zindabadp034@gmail.com</span>
-          </div>
-        </div>
+      <div className="w-full flex flex-col lg:flex-row mb-4">
+  {/* Left - Contact Info */}
+  <div className="w-full lg:w-1/3 p-6 border-t-2 mt-6 lg:mt-0">
+    <h1 className="text-xl font-bold mb-4">New York Office</h1>
 
-        <div className="w-[70%] border-t-2">
-          <div>
-            <GMap />
-          </div>
-        </div>
-      </div>
+    <div className="flex items-start mb-3">
+      <IoLocation className="mt-1 mr-3 text-gray-600" />
+      <span className="text-gray-800">123 New AddressLane, Hyderabad, NY, Pakistan</span>
+    </div>
+
+    <div className="flex items-center mb-3">
+      <FaPhoneAlt className="mr-3 text-gray-600" />
+      <span className="text-gray-800">(+92) 302-975-5913</span>
+    </div>
+
+    <div className="flex items-center">
+      <MdEmail className="mr-3 text-gray-600" />
+      <span className="text-gray-800">zindabadp034@gmail.com</span>
+    </div>
+  </div>
+
+  {/* Right - Map */}
+  <div className="w-full lg:w-2/3 border-t-2 mt-6 lg:mt-0">
+    <div className="w-full h-64 lg:h-full">
+      <GMap />
+    </div>
+  </div>
+</div>
+
+
     </div>
   );
 }
